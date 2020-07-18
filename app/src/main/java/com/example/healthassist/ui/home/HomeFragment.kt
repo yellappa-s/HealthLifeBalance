@@ -9,7 +9,6 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.healthassist.MealPlanActivity
 import com.example.healthassist.R
 
 class HomeFragment : Fragment() {

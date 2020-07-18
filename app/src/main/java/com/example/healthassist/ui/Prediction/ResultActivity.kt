@@ -1,4 +1,4 @@
-package com.example.healthassist.ui.slideshow
+package com.example.healthassist.ui.Prediction
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.healthassist.ui.slideshow
+package com.example.healthassist.ui.Prediction
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

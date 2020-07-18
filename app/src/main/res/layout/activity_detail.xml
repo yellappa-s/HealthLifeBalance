@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         tools:context=".ui.home.DetailActivity">
 
-        <pl.droidsonroids.gif.GifImageView
+        <Gif
             android:id="@+id/_imageDetail"
             android:layout_width="0dp"
             android:layout_height="200dp"

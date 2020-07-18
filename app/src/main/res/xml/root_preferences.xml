@@ -1,21 +1,3 @@
-<!--
-  ~ Copyright © 2019 Hugo Musso Gualandi.
-  ~ SPDX-License-Identifier: GPL-3.0-or-later
-  ~
-  ~ This program is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ This program is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
-  -->
-
 <PreferenceScreen
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory>
@@ -25,7 +7,7 @@
             app:defaultValue="false"
             app:summaryOn="@string/reminder_enabled_summary"
             app:summaryOff="@string/reminder_disabled_summary"/>
-        <br.com.gualandi.dailypill.TimePreference
+        <com.example.healthassist.ui.TimePreference
             app:key="reminder_time"
             app:title="@string/reminder_time"
             app:defaultValue="04:00"
@@ -36,9 +18,5 @@
             app:defaultValue="true"
             app:summary="@string/reminder_lock_screen_summary"
             app:dependency="reminder_enabled"/>
-        <Preference
-            app:key="test_reminder"
-            app:widgetLayout="@layout/test_notification_button"
-            app:dependency="reminder_enabled" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -71,13 +71,4 @@
         android:layout_marginTop="25dp"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/diet_plan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="@string/dietplan"
-        android:visibility="invisible" />
-
 </LinearLayout>

@@ -30,14 +30,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_bmi"
         android:name="com.example.healthassist.ui.BMI.BMIFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.healthassist.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_prediction"
+        android:name="com.example.healthassist.ui.Prediction.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
@@ -45,5 +45,10 @@
         android:name="com.example.healthassist.ui.Fitness.FitnessFragment"
         android:label="Fitness"
         tools:layout="@layout/fragment_fitness"/>
+    <fragment
+        android:id="@+id/remainder"
+        android:name="com.example.healthassist.ui.RemainderActivity$MedicineNotTakenFragment"
+        android:label="Medication Remainder"
+        tools:layout="@layout/activity_remainder"/>
 
 </navigation>

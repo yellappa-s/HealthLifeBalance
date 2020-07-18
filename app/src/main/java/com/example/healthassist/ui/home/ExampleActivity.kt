@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.anjali.healthguru.HomeRemedyAdaptor
 import com.example.healthassist.R
 
 class ExampleActivity : AppCompatActivity() {

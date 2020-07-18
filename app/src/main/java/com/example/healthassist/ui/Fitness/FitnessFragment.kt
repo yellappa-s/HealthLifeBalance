@@ -59,8 +59,8 @@ class FitnessFragment : Fragment() , SensorEventListener {
     override fun onSensorChanged(event: SensorEvent) {
         if (running) {
             stepsValue.text = "" + event.values[0].toInt()
-            calView.text = "" + event.values[0]*0.045
-            kmView.text = "" + event.values[0]*0.0008
+            calView.text = "%.2f".format(event.values[0]*0.045)
+            kmView.text = "%.2f".format(event.values[0]*0.0008)
         }
     }
 }

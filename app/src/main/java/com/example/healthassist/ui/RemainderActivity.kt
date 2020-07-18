@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import com.example.healthassist.R
 import java.util.*
 
@@ -21,8 +22,9 @@ class RemainderActivity : AppCompatActivity(), SharedPreferencesListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        setContentView(R.layout.fragment_medicine_not_taken)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {

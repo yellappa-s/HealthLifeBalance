@@ -9,11 +9,11 @@
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_bmi"
             android:icon="@drawable/ic_calc"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_prediction"
             android:icon="@drawable/ic_predict"
             android:title="@string/menu_slideshow" />
         <item
@@ -21,7 +21,7 @@
             android:icon="@drawable/ic_action_run"
             android:title="Step Counter"/>
         <item
-            android:id="@+id/fragment_container"
+            android:id="@+id/remainder"
             android:icon="@drawable/ic_alarm"
             android:title="Medicatin Remainder"/>
 

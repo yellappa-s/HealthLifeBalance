@@ -1,7 +1,6 @@
 package com.example.healthassist.ui.home
 
 import android.os.Parcelable
-import android.widget.Button
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

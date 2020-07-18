@@ -1,4 +1,4 @@
-package com.anjali.healthguru
+package com.example.healthassist.ui.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthassist.R
-import com.example.healthassist.ui.home.Images
 
 class HomeRemedyAdaptor(
     private val context: Context,
