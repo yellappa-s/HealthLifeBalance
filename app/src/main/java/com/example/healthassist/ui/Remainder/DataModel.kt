@@ -3,6 +3,8 @@ package com.example.healthassist.ui.Remainder
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.preference.PreferenceManager.setDefaultValues
 import com.example.healthassist.R
 import java.util.*
 
@@ -23,8 +25,8 @@ object DataModel {
      * This should be called on application startup, before anything else.
      */
     fun init(context: Context) {
-        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context)
-        PreferenceManager.setDefaultValues(context, R.xml.root_preferences, false)
+        sharedPrefs = getDefaultSharedPreferences(context)
+        setDefaultValues(context, R.xml.root_preferences, false)
     }
 
     //

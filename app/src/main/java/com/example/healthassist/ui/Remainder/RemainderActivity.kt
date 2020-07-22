@@ -1,8 +1,7 @@
 package com.example.healthassist.ui.Remainder
 
-
 import android.content.Context
-import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.format.DateFormat
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +10,16 @@ import com.example.healthassist.R
 import androidx.preference.Preference
 import java.util.*
 
-class RemainderActivity : AppCompatActivity(){
+class RemainderActivity : AppCompatActivity(), SharedPreferencesListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remainder)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.settings, SettingsFragment())
+            .commit()
+        DataModel.init(this)
+        Notifications.init(this)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
@@ -25,12 +30,8 @@ class RemainderActivity : AppCompatActivity(){
             val reminderTime : TimePreference = findPreference("reminder_time")!!
             reminderTime.summaryProvider = ReminderTimeSummaryProvider(requireActivity())
 
-            val testButton : Preference = findPreference("test_reminder")!!
-            testButton.setOnPreferenceClickListener { clickTestButton(); true  }
         }
 
-        // The preference library has a boneheaded and inextensible design so we need to override
-        // this function and copy paste some code from the original implementations.
         override fun onDisplayPreferenceDialog(preference: Preference?) {
             if (preference is TimePreference) {
                 val bundle = Bundle(1); bundle.putString("key", preference.getKey())
@@ -43,10 +44,6 @@ class RemainderActivity : AppCompatActivity(){
             }
         }
 
-        private fun clickTestButton() {
-            val now = Calendar.getInstance()
-            Notifications.sendReminderNotification(now, true)
-        }
     }
 
     class ReminderTimeSummaryProvider(private val ctx: Context): Preference.SummaryProvider<TimePreference>{
@@ -57,7 +54,17 @@ class RemainderActivity : AppCompatActivity(){
             return DateFormat.getTimeFormat(ctx).format(cal.time)
         }
     }
+    override fun onStart() {
+        super.onStart()
+        DataModel.addListener(this)
+    }
 
+    override fun onStop() {
+        super.onStop()
+        DataModel.removeListener(this)
+    }
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
 
+    }
 
 }
