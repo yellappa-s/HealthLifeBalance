@@ -45,10 +45,15 @@
         android:name="com.example.healthassist.ui.Fitness.FitnessFragment"
         android:label="Fitness"
         tools:layout="@layout/fragment_fitness"/>
-    <fragment
+    <activity
         android:id="@+id/remainder"
-        android:name="com.example.healthassist.ui.RemainderActivity$MedicineNotTakenFragment"
+        android:name="com.example.healthassist.ui.Remainder.RemainderActivity"
         android:label="Medication Remainder"
         tools:layout="@layout/activity_remainder"/>
+    <activity
+        android:id="@+id/calorieIntake"
+        android:name="com.example.healthassist.ui.CalorieIntake.CalorieActivity"
+        android:label="Calorie Intake"
+        tools:layout="@layout/activity_calorie"/>
 
 </navigation>

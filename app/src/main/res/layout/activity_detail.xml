@@ -9,13 +9,12 @@
         android:layout_height="wrap_content"
         tools:context=".ui.home.DetailActivity">
 
-        <Gif
+        <pl.droidsonroids.gif.GifImageView
             android:id="@+id/_imageDetail"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginTop="25dp"
             tools:ignore="MissingConstraints" />
-
 
         <TextView
             android:id="@+id/_imageTitle"

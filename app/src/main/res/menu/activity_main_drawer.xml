@@ -24,6 +24,10 @@
             android:id="@+id/remainder"
             android:icon="@drawable/ic_alarm"
             android:title="Medicatin Remainder"/>
+        <item
+            android:id="@+id/calorieIntake"
+            android:icon="@drawable/ic_restaurant"
+            android:title="Calorie Intake"/>
 
     </group>
 </menu>

@@ -13,8 +13,8 @@
 
     <string name="home_second">Home Second</string>
 
-    <string name="height">Height (cm)</string>
-    <string name="weight">Weight (Kg)</string>
+    <string name="height_1">Height (cm)</string>
+    <string name="weight_1">Weight (Kg)</string>
     <string name="calculateBMI">Calculate BMI</string>
     <string name="very_severely_underweight">Very Sevrely Underweight</string>
     <string name="severely_underweight">Severely Underweight</string>
@@ -98,4 +98,33 @@
 
     <string name="reminder_time_edittext_hint">HH:MM</string>
     <string name="reminder_time_edittext_format">The time must be in 24-hour HH:MM format</string>
+
+    <string name="Age">Age</string>
+    <string name="Age_entry">Age in years</string>
+    <string name="height">Height</string>
+    <string name="button_name">Next</string>
+    <string name="Gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="weight1">Weight in Kgs</string>
+    <string name="height_entry">Height in cms</string>
+    <string name="health">Present Health Condition</string>
+
+    <string-array name="Gender">
+        <item>choose</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="R1">NO Sport/exercise</string>
+    <string name="R2">Light activity(sport 1–3 times per week)</string>
+    <string name="R3">Moderate activity(Sport 3–5 times per week)</string>
+    <string name="R4">High active(Daily exercise)</string>
+    <string name="R5">Extreme active(Professional athlete)</string>
+    <string name="string1">your daily goals</string>
+    <string name="go_to_home">Go to Home</string>
+    <string name="plan">see diet plan</string>
+    <string name="heading">Balance diet plan</string>
+    <string name="info">> Concentration to complete your daily goal with healthy food.\n
+    >Eat lots of fruit and vegetables.\n
+    >Base your meals on higher fiber starchy carbohydrates.\n
+    >To maintain good health, limit your consumption of empty calories(saturated fat and sugar) and instead try to get your calories from foods that are rich in other nutrients.</string>
 </resources>

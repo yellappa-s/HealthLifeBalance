@@ -37,11 +37,11 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
             imageview3?.setOnClickListener {
-                val intent = Intent(context, YogaActivity::class.java)
+                val intent = Intent(context, ChoiceActivity::class.java)
                 startActivity(intent)
             }
             imageview4?.setOnClickListener {
-                val intent = Intent(context, ExampleTwo::class.java)
+                val intent = Intent(context, MealPlanActivity::class.java)
                 startActivity(intent)
             }
         })

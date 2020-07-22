@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CalorieIntake.CalorieActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Age"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Age_entry"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/height_entry"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:importantForAutofill="no"/>
+
+
+    <TextView
+        android:id="@+id/e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/weight1"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Gender"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        />
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie Intake"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/RD1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/R1"
+            android:textSize="18sp"
+            android:onClick="checkButton"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/RD2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/R2"
+            android:textSize="18sp"
+            android:onClick="checkButton"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/RD3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/R3"
+            android:textSize="18sp"
+            android:onClick="checkButton"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/RD4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/R4"
+            android:textSize="18sp"
+            android:onClick="checkButton"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/RD5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/R5"
+            android:textSize="18sp"
+            android:onClick="checkButton"
+            android:checked="true"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center|bottom"
+        android:textSize="30sp"
+        android:text="@string/button_name"
+        android:layout_marginTop="30dp"
+        />
+
+
+</LinearLayout>

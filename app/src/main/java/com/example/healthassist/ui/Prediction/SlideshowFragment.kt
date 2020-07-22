@@ -118,12 +118,15 @@ class SlideshowFragment : Fragment(),AdapterView.OnItemClickListener {
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val s = parent?.getItemAtPosition(position) as String
         val v = view as CheckedTextView
-        if (d.size > 5) {
-            Toast.makeText(context, "please select max 5 symptoms", Toast.LENGTH_SHORT).show()
-        }else {
+        if (d.size < 5) {
             if (v.isChecked && !d.contains(s)) d.add(s)
             else if (!v.isChecked && d.contains(s)) d.remove(s)
+        }else {
+            if (!v.isChecked && d.contains(s)) d.remove(s)
+            if (v.isChecked) {
+                v.isChecked = false
+                Toast.makeText(context, "please select max 5 symptoms", Toast.LENGTH_SHORT).show()
+            }
         }
-
     }
 }

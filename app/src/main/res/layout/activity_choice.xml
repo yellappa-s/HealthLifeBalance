@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ChoiceActivity">
+
+    <ImageView
+        android:id="@+id/imageview4"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/normal"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tite4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yoga that One Should Do Everyday"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageview4"
+        android:layout_margin="10dp"
+        android:layout_marginVertical="30dp"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageview5"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/yogaten"
+        android:layout_below="@+id/tite4"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tite5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yoga for Various Disorders"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageview5"
+        android:layout_margin="20dp"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

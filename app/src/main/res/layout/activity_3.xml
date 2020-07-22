@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.Activity3"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:id="@+id/Dname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Diease name"/>
+        <TextView
+            android:id="@+id/Daynum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Day"/>
+        <TextView
+            android:id="@+id/Break1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="BreakFast"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/Break2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bcontent" />
+        <TextView
+            android:id="@+id/lunch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="Lunch"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/lunch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Lcontent" />
+        <TextView
+            android:id="@+id/snack1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="Snacks"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/snack2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Scontent" />
+        <TextView
+            android:id="@+id/dinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:text="Dinner"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dcontent" />
+
+    </LinearLayout>
+</ScrollView>

@@ -18,6 +18,17 @@ class YogaActivity : AppCompatActivity() {
         this.setTitle("YOGA")
         val imagesList = listOf<Image>(
             Image(
+                R.drawable.surya_namaskar,
+                R.drawable.yogaeight,
+                "Surya Namaskar",
+                "Yoga Benefits:Maintains your nervous system and boosts your immune system\n"+"Stand with feet wide, 3–4 feet apart. Shift your right heel out so your toes are pointing slightly inward. Turn your left foot out 90 degrees. Line up your left heel with the arch of your right foot.\n" +
+                        "\n" +
+                        "Bend your left knee to a 90-degree angle, keeping the knee in line with the second toe to protect the knee joint. Stretch through your straight back leg and ground down into the back foot.\n" +
+                        "\n" +
+                        "On an inhale, bring arms to a T at shoulder height. Draw your shoulder blades down the back. Spread your fingers and keep palms facedown. Gaze over the front fingers. As you exhale, sink deeper into the stretch."
+
+            ),
+            Image(
                 R.drawable.pose_a,
                 R.drawable.yogaone,
                 "Yoga Pose Type 1:Virabhadrasana ",

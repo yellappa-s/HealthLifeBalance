@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.RemainderActivity"></activity>
-        <activity android:name=".MealPlanActivity" />
+        <activity android:name=".ui.home.Activity3"></activity>
+        <activity android:name=".ui.home.ExampleThreeActivity" />
+        <activity android:name=".ui.home.ExerciseActivity" />
+        <activity android:name=".ui.home.ChoiceActivity" />
+        <activity android:name=".ui.CalorieIntake.CalorieActivity" />
+        <activity android:name=".ui.CalorieIntake.Calorie2Activity" />
+        <activity android:name=".ui.Remainder.RemainderActivity" />
+        <activity android:name=".ui.home.MealPlanActivity" />
         <activity android:name=".ui.Prediction.ResultActivity" />
         <activity
             android:name=".MainActivity"
@@ -25,10 +31,23 @@
         <activity android:name=".ui.home.DetailActivity" />
         <activity android:name=".ui.home.ExampleActivity" />
         <activity android:name=".ui.home.exampleOne" />
-        <activity android:name=".ui.home.ExampleTwo"/>
+        <activity android:name=".ui.home.ExampleTwo" />
         <activity android:name=".ui.home.FirstAidActivity" />
         <activity android:name=".ui.home.HomeRemedyActivity" />
         <activity android:name=".ui.home.YogaActivity" />
+        <receiver
+            android:name=".ui.Remainder.AlarmInitReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Make sure to update AlarmInitReceiver.kt if you edit this list -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ui.Remainder.AlarmReceiver" />
     </application>
 
 </manifest>

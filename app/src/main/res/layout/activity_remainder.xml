@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.RemainderActivity">
-
-    <include layout="@layout/toolbar" />
+    tools:context=".ui.Remainder.RemainderActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"

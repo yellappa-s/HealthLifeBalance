@@ -1,43 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealPlanActivity">
+    tools:context=".ui.home.MealPlanActivity">
 
-    <ImageView
-        android:id="@+id/_imageDetail"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/healthyp"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/healthyperson"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/_imageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_imageDetail" />
-
-    <TextView
-        android:id="@+id/_imageDesc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_imageTitle" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tite1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="healthlyperson"
+            android:textSize="20sp"
+            android:layout_below="@+id/healthyp"
+            android:layout_margin="10dp"
+            android:layout_marginVertical="30dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/diab"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/diabetic"
+            android:layout_below="@+id/tite1"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetes"
+            android:textSize="20sp"
+            android:layout_below="@+id/daib"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/bp"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/bloodpressure"
+            android:layout_below="@+id/tite2"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure"
+            android:textSize="15sp"
+            android:layout_below="@+id/bp"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/heartp"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/heartprob"
+            android:layout_below="@+id/tite3"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heart Problem"
+            android:textSize="15sp"
+            android:layout_below="@+id/heartp"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/gastric"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/garstric"
+            android:layout_below="@+id/tite4"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gastric/Acidity"
+            android:textSize="15sp"
+            android:layout_below="@+id/gastric"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/weightloss"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/weightloss"
+            android:layout_below="@+id/tite5"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weightloss"
+            android:textSize="15sp"
+            android:layout_below="@+id/weightloss"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/weightgain"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/weightgain1"
+            android:layout_below="@+id/tite6"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tite7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gastric/Weight Gain"
+            android:textSize="15sp"
+            android:layout_below="@+id/weightgain"
+            android:layout_margin="20dp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+</ScrollView>
