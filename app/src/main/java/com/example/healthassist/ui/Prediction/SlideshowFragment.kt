@@ -105,7 +105,7 @@ class SlideshowFragment : Fragment(),AdapterView.OnItemClickListener {
                 }
             }
             var max = c[0]
-            for (m in 0..5) {
+            for (m in 0..6) {
                 if (c[m] > max) max = c[m]
             }
             val result = Intent(context, ResultActivity::class.java)

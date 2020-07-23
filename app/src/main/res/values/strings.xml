@@ -9,14 +9,14 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">BMI Calculator</string>
-    <string name="menu_slideshow">Disease Predition</string>
+    <string name="menu_slideshow">Disease Prediction</string>
 
     <string name="home_second">Home Second</string>
 
     <string name="height_1">Height (cm)</string>
     <string name="weight_1">Weight (Kg)</string>
     <string name="calculateBMI">Calculate BMI</string>
-    <string name="very_severely_underweight">Very Sevrely Underweight</string>
+    <string name="very_severely_underweight">Very Severely Underweight</string>
     <string name="severely_underweight">Severely Underweight</string>
     <string name="underweight">Underweight</string>
     <string name="normal">Normal</string>
@@ -30,30 +30,30 @@
     <string name="result" />
     <string-array name="symptom_list">
         <item>Anxiety</item>
-        <item>Stomach Ache</item>
-        <item>Nausea</item>
-        <item>Vomiting</item>
+        <item>Abdominal Pain</item>
+        <item>Blurred Vision</item>
+        <item>Chest Pain</item>
+        <item>Diarrhoea/Constipation</item>
+        <item>Dizziness</item>
+        <item>Dry Cough</item>
+        <item>Fast Heartbeat</item>
         <item>Fever</item>
+        <item>Frequent Urination</item>
+        <item>Headaches</item>
+        <item>Hunger</item>
+        <item>Indigestion</item>
+        <item>Muscle And Body Pain</item>
+        <item>Muscle Pain</item>
+        <item>Nausea</item>
+        <item>Pressure Or Heaviness In Chest</item>
+        <item>Shortness in Breath</item>
+        <item>Stomach Ache</item>
+        <item>Skin Itching</item>
         <item>Sudden Weight Loss</item>
         <item>Sweating</item>
-        <item>Muscle And Body Pain</item>
         <item>Thirsty Than Usual</item>
-        <item>Headaches</item>
+        <item>Vomiting</item>
         <item>Weakness/Fatigue</item>
-        <item>Abdominal Pain</item>
-        <item>Muscle Pain</item>
-        <item>Dry Cough</item>
-        <item>Diarrhoea/Constipation</item>
-        <item>Frequent Urination</item>
-        <item>Hunger</item>
-        <item>Blurred Vision</item>
-        <item>Skin Itching</item>
-        <item>Chest Pain</item>
-        <item>Shortness in Breath</item>
-        <item>Dizziness</item>
-        <item>Fast Heartbeat</item>
-        <item>Indigestion</item>
-        <item>Pressure Or Heaviness In Chest</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -99,6 +99,10 @@
     <string name="reminder_time_edittext_hint">HH:MM</string>
     <string name="reminder_time_edittext_format">The time must be in 24-hour HH:MM format</string>
 
+    <string name="title_activity_maps">Map</string>
+    <string name="hospital">Hospital</string>
+    <string name="pharmacy">Pharmacy</string>
+
     <string name="Age">Age</string>
     <string name="Age_entry">Age in years</string>
     <string name="height">Height</string>
@@ -127,4 +131,6 @@
     >Eat lots of fruit and vegetables.\n
     >Base your meals on higher fiber starchy carbohydrates.\n
     >To maintain good health, limit your consumption of empty calories(saturated fat and sugar) and instead try to get your calories from foods that are rich in other nutrients.</string>
+    <string name="tomap">To view nearby Hospitals and pharmacy click the button below</string>
+    <string name="map">Map</string>
 </resources>

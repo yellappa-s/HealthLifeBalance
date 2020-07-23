@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.healthassist">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +19,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.Activity3"></activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.mymap.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".ui.mymap.ListActivity"/>
+        <activity android:name=".ui.home.Activity3" />
         <activity android:name=".ui.home.ExampleThreeActivity" />
         <activity android:name=".ui.home.ExerciseActivity" />
         <activity android:name=".ui.home.ChoiceActivity" />
@@ -35,10 +62,12 @@
         <activity android:name=".ui.home.FirstAidActivity" />
         <activity android:name=".ui.home.HomeRemedyActivity" />
         <activity android:name=".ui.home.YogaActivity" />
+
         <receiver
             android:name=".ui.Remainder.AlarmInitReceiver"
             android:enabled="true">
             <intent-filter>
+
                 <!-- Make sure to update AlarmInitReceiver.kt if you edit this list -->
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.LOCALE_CHANGED" />

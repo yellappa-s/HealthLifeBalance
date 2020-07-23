@@ -49,7 +49,7 @@ class ExampleActivity : AppCompatActivity() {
             Images(
                 R.drawable.fever,
                 "Fever",
-                "Drink plenty of fluids. Fever can cause fluid loss and dehydration, so drink water, juices or broth. ...\n" +
+                "Drink plenty of fluids. Fever can cause fluid loss and dehydration, so drink water, juices or both. ...\n" +
                         "Rest. You need rest to recover, and activity can raise your body temperature.\n" +
                         "Stay cool. Dress in light clothing, keep the room temperature cool and sleep with only a sheet or light blanket.\n"
             ),

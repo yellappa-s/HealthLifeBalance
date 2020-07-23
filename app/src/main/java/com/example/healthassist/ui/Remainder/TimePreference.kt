@@ -1,4 +1,3 @@
-
 package com.example.healthassist.ui.Remainder
 
 import android.annotation.SuppressLint
@@ -17,10 +16,6 @@ import android.widget.TimePicker
 import android.widget.Toast
 import androidx.preference.PreferenceDialogFragmentCompat
 import com.example.healthassist.R
-
-//
-// We store the time as a human-readable string in HH:MM format.
-//
 
 fun serializeTime(t0: Int, t1: Int): String {
     return String.format("%02d:%02d", t0, t1)
@@ -47,33 +42,32 @@ fun parseTime(value: String): Pair<Int, Int> {
     return Pair(t0, t1)
 }
 
-/** Select hours+minutes in settings screen with a TimePicker widget
- *
- * The code here is inspired by the implementation of the EditTextPreference, which can be found at
- * https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/preference/preference/src/main/java/androidx/preference
- *
- * We also take inspiration from this StackOverflow answer:
- * https://stackoverflow.com/a/34398747
- *
- * I should note that the API for the androidx.preference library is slightly different from the
- * API for the deprecated android.preference library, and most of the examples on the web refer
- * to the old version. So watch out for that.
- */
-
 class TimePreference : DialogPreference {
 
-    public var hour   = 0
-    public var minute = 0
+    var hour = 0
+    var minute = 0
     private var valueIsSet = false
 
     @Suppress("unused")
-    constructor(context: Context): super(context)
+    constructor(context: Context) : super(context)
+
     @Suppress("unused")
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+
     @Suppress("unused")
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context,attrs,defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
+
     @Suppress("unused")
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(
+        context,
+        attrs,
+        defStyleAttr,
+        defStyleRes
+    )
 
     override fun onGetDefaultValue(arr: TypedArray, i: Int): Any {
         return arr.getString(i) as Any
@@ -85,8 +79,7 @@ class TimePreference : DialogPreference {
         setTime(parseTime(persisTedString))
     }
 
-    public fun setTime(value: Pair<Int, Int>) {
-        // Always persist/notify the first time.
+    fun setTime(value: Pair<Int, Int>) {
         val (newHour, newMinute) = value
         val changed = (hour != newHour || minute != newMinute)
         if (!valueIsSet || changed) {
@@ -98,11 +91,7 @@ class TimePreference : DialogPreference {
             notifyChanged()
         }
     }
-
-    // override fun onSaveInstanceState(): Parcelable {}
-    // override fun onRestoreInstanceState(state: Parcelable) {}
 }
-
 class TimePreferenceDialogFragmentCompat : PreferenceDialogFragmentCompat() {
 
     private var hasTimePicker = false

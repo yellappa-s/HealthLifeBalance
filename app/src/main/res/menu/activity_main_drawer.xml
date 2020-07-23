@@ -23,11 +23,15 @@
         <item
             android:id="@+id/remainder"
             android:icon="@drawable/ic_alarm"
-            android:title="Medicatin Remainder"/>
+            android:title="Medication Remainder"/>
         <item
             android:id="@+id/calorieIntake"
             android:icon="@drawable/ic_restaurant"
             android:title="Calorie Intake"/>
+        <item
+            android:id="@+id/nearby"
+            android:icon="@drawable/ic_location"
+            android:title="Near By Hospitals"/>
 
     </group>
 </menu>

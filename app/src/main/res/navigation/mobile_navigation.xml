@@ -55,5 +55,10 @@
         android:name="com.example.healthassist.ui.CalorieIntake.CalorieActivity"
         android:label="Calorie Intake"
         tools:layout="@layout/activity_calorie"/>
+    <activity
+        android:id="@+id/nearby"
+        android:name="com.example.healthassist.ui.mymap.MapsActivity"
+        android:label="Near By Hospitals"
+        tools:layout="@layout/activity_maps"/>
 
 </navigation>

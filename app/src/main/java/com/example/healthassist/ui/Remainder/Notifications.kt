@@ -26,10 +26,6 @@ object Notifications:
         DataModel.addListener(this)
     }
 
-    /**
-     * Register this app's notification channels with the system.
-     * They were introduced and made mandatory in Android O.
-     */
     private fun createNotificationChannels() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) { return }
 
@@ -144,28 +140,18 @@ object Notifications:
         val pendingIntent =
             alarmPendingIntent()
 
-        // Starting with API level 19, alarm delivery on android is inexact, and there is a delivery
-        // window that the system takes advantage of to optimize battery usage. Unfortunately, the
-        // default delivery window for alarms being set to a day from now can be of 18h or more,
-        // which is prohibitive for us. This means that we cannot rely on the setRepeating family of
-        // functions. The only option is to use `setWindow`, or one of the variations of `setExact`.
-        // By the way, to debug the state of the alarm system, use `adb shell dumpsys alarm`.
         val alarmManager =
             appContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.setExact(
             AlarmManager.RTC_WAKEUP,
             alarmTime,
             pendingIntent)
-
-        // Remember the planned alarm time to be able to warn the user if the alarm does not fire
-        // as scheduled, possibly due to aggressive battery management on certain devices.
         DataModel.setNextAlarmTimestamp(alarmTime)
     }
 
     fun removeAlarm() {
         val alarmManager = appContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.cancel(alarmPendingIntent())
-        // Toast.makeText(appContext, "#Alarm removed", Toast.LENGTH_SHORT).show()
     }
 
     fun resetAlarm() {

@@ -23,14 +23,7 @@ class ReminderActivity : AppCompatActivity() {
                 window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
             }
         }
-
-        // This activity's title briefly flashes on the screen after we dismiss the dialog.
-        // So we set it to the empty string as a workaround.
         setTitle("")
-
-        // Don't call setContentView. We apparently don't need it
-        // setContentView(/*...*/)
-
         @SuppressLint("InflateParams")
         val dialogContents = layoutInflater.inflate(R.layout.reminder_dialog, null)
 

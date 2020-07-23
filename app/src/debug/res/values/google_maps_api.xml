@@ -1,0 +1,23 @@
+<resources>
+    <!--
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=AD:4D:D9:EE:77:C7:63:47:B9:63:42:8C:27:0D:DC:03:2F:48:81:68%3Bcom.example.healthassist.ui.mymap
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.healthassist.ui.mymap
+
+    SHA-1 certificate fingerprint:
+    AD:4D:D9:EE:77:C7:63:47:B9:63:42:8C:27:0D:DC:03:2F:48:81:68
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBFlhUNK4YCqgUUY1sm6nWEYFI41onyWNM</string>
+</resources>
