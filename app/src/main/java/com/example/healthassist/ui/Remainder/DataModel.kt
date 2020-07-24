@@ -21,17 +21,10 @@ object DataModel {
 
     private lateinit var sharedPrefs: SharedPreferences
 
-    /**
-     * This should be called on application startup, before anything else.
-     */
     fun init(context: Context) {
         sharedPrefs = getDefaultSharedPreferences(context)
         setDefaultValues(context, R.xml.root_preferences, false)
     }
-
-    //
-    // DRUG_TAKEN_TIMESTAMP
-    //
 
     fun getDrugTakenTimestamp(): Long {
         return sharedPrefs.getLong(DRUG_TAKEN_TIMESTAMP, 0)

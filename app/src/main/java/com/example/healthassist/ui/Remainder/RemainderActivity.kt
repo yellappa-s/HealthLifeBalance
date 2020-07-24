@@ -23,12 +23,12 @@ class RemainderActivity : AppCompatActivity(), SharedPreferencesListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remainder)
+        DataModel.init(this)
+        Notifications.init(this)
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.settings, SettingsFragment())
             .commit()
-        DataModel.init(this)
-        Notifications.init(this)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {

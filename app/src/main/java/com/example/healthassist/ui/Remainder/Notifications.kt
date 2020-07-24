@@ -16,8 +16,7 @@ import java.util.*
 private const val REMINDER_CHANNEL_ID = "channel_01"
 private const val NOTIFICATION_ID = 1
 
-object Notifications:
-    SharedPreferencesListener {
+object Notifications: SharedPreferencesListener {
 
     private lateinit var appContext: Context
 
@@ -32,12 +31,9 @@ object Notifications:
         val notificationManager =
             appContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        val channel01 = NotificationChannel(
-            REMINDER_CHANNEL_ID,
-            appContext.getString(R.string.reminder),
-            NotificationManager.IMPORTANCE_HIGH)
+        val channel01 = NotificationChannel(REMINDER_CHANNEL_ID,
+            appContext.getString(R.string.reminder), NotificationManager.IMPORTANCE_HIGH)
         channel01.description = appContext.getString(R.string.notification_channel_description_1)
-
         notificationManager.createNotificationChannel(channel01)
     }
 
@@ -61,10 +57,7 @@ object Notifications:
             PendingIntent.getActivity(appContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         val builder =
-            NotificationCompat.Builder(
-                appContext,
-                REMINDER_CHANNEL_ID
-            )
+            NotificationCompat.Builder(appContext, REMINDER_CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_pill)
                 .setContentTitle(appContext.getString(R.string.notification_title))
                 .setContentText(appContext.getString(R.string.notification_description))
@@ -101,30 +94,20 @@ object Notifications:
         val hasMedicated= DataModel.hasTakenDrugInTheSameDayAs(now)
         val reminderTime= DataModel.dailyReminderTimeForTheSameDayAs(now)
         if (!reminderEnabled || hasMedicated || now.before(reminderTime)) {
-            NotificationManagerCompat.from(appContext).cancel(
-                NOTIFICATION_ID
-            )
+            NotificationManagerCompat.from(appContext).cancel(NOTIFICATION_ID)
         }
     }
 
-    // Do we have missed notifications?
     fun possiblyAddMissedNotification(now: Calendar) {
         val timeToday = DataModel.dailyReminderTimeForTheSameDayAs(now)
         if (now.after(timeToday) && !DataModel.hasTakenDrugInTheSameDayAs(now)) {
-            sendReminderNotification(
-                now,
-                false
-            )
+            sendReminderNotification(now, false)
         }
     }
 
     private fun alarmPendingIntent(): PendingIntent {
         val intent = Intent(appContext, AlarmReceiver::class.java)
-        return PendingIntent.getBroadcast(
-            appContext,
-            0,
-            intent,
-            PendingIntent.FLAG_UPDATE_CURRENT)
+        return PendingIntent.getBroadcast(appContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
     }
 
     fun addAlarm(now: Calendar, onlyTomorrow: Boolean) {
@@ -137,15 +120,10 @@ object Notifications:
             if (onlyTomorrow || nowIsAfterTodaysMedicine) { timeTomorrow } else { timeToday }
         val alarmTime = alarmCal.timeInMillis
 
-        val pendingIntent =
-            alarmPendingIntent()
+        val pendingIntent = alarmPendingIntent()
 
-        val alarmManager =
-            appContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.setExact(
-            AlarmManager.RTC_WAKEUP,
-            alarmTime,
-            pendingIntent)
+        val alarmManager = appContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTime, pendingIntent)
         DataModel.setNextAlarmTimestamp(alarmTime)
     }
 
@@ -156,10 +134,7 @@ object Notifications:
 
     fun resetAlarm() {
         if (DataModel.reminderIsEnabled()) {
-            addAlarm(
-                Calendar.getInstance(),
-                false
-            )
+            addAlarm(Calendar.getInstance(), false)
         } else {
             removeAlarm()
         }

@@ -7,7 +7,6 @@ import java.util.*
 
 class AlarmInitReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        // TIME_CHANGED instead of TIME_SET is intentional.
         when (intent.action) {
             Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_LOCALE_CHANGED,
             Intent.ACTION_MY_PACKAGE_REPLACED,

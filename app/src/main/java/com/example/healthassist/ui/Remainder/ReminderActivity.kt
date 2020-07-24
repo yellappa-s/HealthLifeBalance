@@ -23,7 +23,6 @@ class ReminderActivity : AppCompatActivity() {
                 window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
             }
         }
-        setTitle("")
         @SuppressLint("InflateParams")
         val dialogContents = layoutInflater.inflate(R.layout.reminder_dialog, null)
 
